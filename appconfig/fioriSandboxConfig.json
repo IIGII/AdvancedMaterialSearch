@@ -1,0 +1,125 @@
+{
+  "services": {
+    "LaunchPage": {
+      "adapter": {
+        "config": {
+          "groups": [
+            {
+              "id": "Fiori Local",
+              "title": "Local Fiori Launchpad",
+              "isPreset": true,
+              "isVisible": true,
+              "isGroupLocked": false,
+              "tiles": [
+                {
+                  "id": "openui5-sample-app",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "catalogTile_00",
+                    "title": "OpenUI5 sample app",
+                    "targetURL": "#openui5-sampleApp"
+                  }
+                },
+                {
+                  "id": "mobilemaintenance40",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "catalogTile_mobilemaintenance40",
+                    "title": "mobilemaintenance40",
+                    "targetURL": "#mobilemaintenance40-display"
+                  }
+                },
+                {
+                  "id": "ZTEST_0002",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "catalogTile_ZTEST_0002",
+                    "title": "ZTEST_0002",
+                    "targetURL": "#ZTEST_0002-display"
+                  }
+                },
+                {"id": "ams",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "catalogTile_ams",
+                    "title": "ams",
+                    "targetURL": "ams-display"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "NavTargetResolution": {
+      "config": {
+        "enableClientSideTargetResolution": true
+      }
+    },
+    "ClientSideTargetResolution": {
+      "adapter": {
+        "config": {
+          "inbounds": {
+            "openui5-sample-app": {
+              "semanticObject": "openui5",
+              "action": "sampleApp",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.ui.demo.todo",
+                "url": "/apps/mobilemaintenance40/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "mobilemaintenance40": {
+              "semanticObject": "mobilemaintenance40",
+              "action": "display",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=com.tcon.mm40.pm",
+                "url": "/apps/mobilemaintenance40/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "ZTEST_0002": {
+              "semanticObject": "ZTEST_0002",
+              "action": "display",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=com.ztest_0002.ZTEST_0002",
+                "url": "/apps/ZTEST_0002/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "ams": {
+              "semanticObject": "ams",
+              "action": "display",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=com.AdvancedMaterialSearch.ams",
+                "url": "/apps/ams/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
