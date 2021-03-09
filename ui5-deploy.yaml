@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '1.0'
+metadata:
+  name: 'ams_module'
+type: application
+ui5Theme: sap_fiori_3
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://sap-d19.team-con.de
+        app:
+          name: AMS_DEP_CONF
+          description: deploy-config for my projekt
+          package: AMS_MODULE
+          transport: ""
